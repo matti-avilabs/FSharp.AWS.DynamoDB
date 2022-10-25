@@ -74,6 +74,7 @@ type ``Pagination Tests`` (fixture : TableFixture) =
                 && None = res3.LastEvaluatedKey @>
         test <@ items = Array.append res1.Records res2.Records
                 && Array.isEmpty res3.Records @>
+        test <@1 = 2@>
 
     let [<Fact>] ``Paginated Query on GSI`` () =
         let hk = guid()
